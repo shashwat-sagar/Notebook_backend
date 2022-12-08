@@ -5,7 +5,7 @@ require("dotenv").config();
 connectToMongo();
 const app = express();
 const port = process.env.PORT;
-const host = "http://localhost";
+const host = "https://notebook-backend.up.railway.app";
 app.use(cors());
 app.use(express.json());
 
