@@ -7,7 +7,7 @@ const { body, validationResult } = require("express-validator");
 var jwt = require("jsonwebtoken");
 var fetchuser = require("../middleware/fetchuser");
 
-const JWToken = "^1dsi1fwjcummxzmcgnxwvsnwx";
+const JWToken = "^1dsi1fwjcummxzmcgnxwvsnwx" || process.env.JWToken;
 // Route1 : Create a user using : POST '/api/auth/createuser'. Doesnt require authentication.
 router.post(
   "/createuser",
