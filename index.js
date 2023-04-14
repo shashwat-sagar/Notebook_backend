@@ -13,9 +13,9 @@ app.use(express.json());
 
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/notes", require("./routes/notes"));
-// app.use("/", (req, res) => {
-//   res.send("Welcome to iNotebook backend");
-// });
+app.use("/", (req, res) => {
+  res.send("<h1>Welcome to iNotebook backend</h1>");
+});
 
 app.listen(port, () => {
   console.log(`iNotebook backend listening on port ${host}:${port}`);
